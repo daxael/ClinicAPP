@@ -1,8 +1,8 @@
 # ClinicAPP
 
-![Screenshot_2019-08-15-19-23-07-282_com UtiliApp](https://user-images.githubusercontent.com/49367885/63114445-24cda500-bf95-11e9-9e8c-bf120d2f0df2.png)
+![Screenshot_2019-08-15-19-23-07-282_com UtiliApp](https://user-images.githubusercontent.com/49367885/63114713-cead3180-bf95-11e9-9510-1e3db5dfbd90.png)
 
-![Screenshot_2019-08-15-19-41-51-054_com UtiliApp](https://user-images.githubusercontent.com/49367885/63114472-344cee00-bf95-11e9-9d80-7d3b2a719c76.png)
+![Screenshot_2019-08-15-19-41-51-054_com UtiliApp](https://user-images.githubusercontent.com/49367885/63114729-d5d43f80-bf95-11e9-88b0-6975d8590f7f.png)
 
 
 Pequeña aplicación pensada para servir de apoyo a una clínica.
