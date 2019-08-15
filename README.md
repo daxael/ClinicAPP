@@ -1,8 +1,6 @@
 # ClinicAPP
 
-![Screenshot_2019-08-15-19-36-07-981_com example clinicapp](https://user-images.githubusercontent.com/49367885/63115151-d9b49180-bf96-11e9-9039-632db0afb004.png)
-
-![Screenshot_2019-08-15-19-37-06-455_com example clinicapp](https://user-images.githubusercontent.com/49367885/63115172-e2a56300-bf96-11e9-8fa0-11bd48367bf5.png)
+![Screenshot_2019-08-15-19-36-07-981_com example clinicapp](https://user-images.githubusercontent.com/49367885/63115151-d9b49180-bf96-11e9-9039-632db0afb004.png)![Screenshot_2019-08-15-19-37-06-455_com example clinicapp](https://user-images.githubusercontent.com/49367885/63115172-e2a56300-bf96-11e9-8fa0-11bd48367bf5.png)
 
 
 
