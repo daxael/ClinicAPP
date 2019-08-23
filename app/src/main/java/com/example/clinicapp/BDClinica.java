@@ -24,7 +24,7 @@ public class BDClinica extends SQLiteOpenHelper {
     String sqlInsertUsuario = "INSERT INTO Usuario(UsuarioID, Nombre,EsMedico, Email, Telefono, DNI, Contrasena) VALUES(null, 'Rodrigo',0, 'prueba@gmail.com', 693959218, 'H0545923D', '1111a')";
     String sqlInsertUsuarioDos = "INSERT INTO Usuario(UsuarioID, Nombre,EsMedico, Email, Telefono, DNI, Contrasena) VALUES(null, 'Alberto',1, 'prueba2@gmail.com', 60623454, 'H054443223D', '1111a')";
     String sqlInsertUsuarioTres = "INSERT INTO Usuario(UsuarioID, Nombre,EsMedico, Email, Telefono, DNI, Contrasena) VALUES(null, 'Rafael',1, 'prueba3@gmail.com', 693845839, 'H032923D', '1111a')";
-    String sqlInsertInformacionUsuario = "INSERT INTO InformacionUsuario(InformacionID, Nombre,Apellidos, Fecha, Peso,Altura, Tipo_Sangre,UsuarioID) VALUES(null, 'Rodrigo','Novoa', 26052019, 70.0, 175,'B',1)";
+    String sqlInsertInformacionUsuario = "INSERT INTO InformacionUsuario(InformacionID, Nombre,Apellidos, Fecha, Peso,Altura, Tipo_Sangre,UsuarioID) VALUES(null, 'Rodrigo','Novoa', 15041997, 70.0, 175,'B',1)";
     String sqlInsertInformacionUsuarioDos = "INSERT INTO InformacionUsuario(InformacionID, Nombre,Apellidos, Fecha, Peso,Altura, Tipo_Sangre,UsuarioID) VALUES(null, 'Alberto','Suarez Gómez', 26052019, 70.0, 175,'B',2)";
     String sqlInsertInformacionClinica = "INSERT INTO Empresa(EmpresaID, Nombre,Direccion, Email, Telefono, Fax, Web) VALUES(1, 'Clinica Prueba','c/ Prueba 16', 'emailclinica@gmail.com', 943523341, 9435864431,'wwww.clinicapp.com')";
     String sqlInsertServicioUno = "INSERT INTO Servicio(ServicioID, Descripcion) VALUES(null, 'SERVICIO DE PRUEBA UNO')";

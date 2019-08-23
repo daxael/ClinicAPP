@@ -7,6 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 //Al igual que la clase de I. Clinica, coge datos del usuario conectado en la APP y rellena los Text View
 public class InformacionUsuario extends AppCompatActivity {
 
@@ -36,16 +42,31 @@ public class InformacionUsuario extends AppCompatActivity {
         txtpeso = findViewById(R.id.txt_peso);
         txttiposangre = findViewById(R.id.txt_tiposangre);
 
-        rellenarInformacion();
+        try {
+            rellenarInformacion();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void rellenarInformacion() {
+    public void rellenarInformacion() throws ParseException {
 
         Cursor cursor = db.rawQuery("SELECT * FROM InformacionUsuario where usuarioid = " + global.getUSuario(), null);
 
+        //String to date
+        Date date;
+        String pattern = "ddMMyyyy";
+        String pattern2 = "dd/MM/yyyy";
+        SimpleDateFormat formatter = new SimpleDateFormat(pattern);
+
+
         while (cursor.moveToNext()) {
+            date = formatter.parse(cursor.getString(3));
+            //Date to string
+            DateFormat df = new SimpleDateFormat(pattern2);
+            String datestring = df.format(date);
             txtnombre.setText("Nombre: " + cursor.getString(1) + " " + cursor.getString(2));
-            txtfecha.setText("Fecha: " + cursor.getString(3));
+            txtfecha.setText("Fecha de nacimiento: " + datestring);
             txtaltura.setText("Altura: " + cursor.getString(5));
             txtpeso.setText("Peso: " + cursor.getString(4));
             txttiposangre.setText("Tipo de Sangre: " + cursor.getString(6));
