@@ -50,23 +50,18 @@ public class InformacionUsuario extends AppCompatActivity {
     }
 
     public void rellenarInformacion() throws ParseException {
-
         Cursor cursor = db.rawQuery("SELECT * FROM InformacionUsuario where usuarioid = " + global.getUSuario(), null);
 
-        //String to date
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        String formattedDate;
         Date date;
-        String pattern = "ddMMyyyy";
-        String pattern2 = "dd/MM/yyyy";
-        SimpleDateFormat formatter = new SimpleDateFormat(pattern);
 
 
         while (cursor.moveToNext()) {
-            date = formatter.parse(cursor.getString(3));
-            //Date to string
-            DateFormat df = new SimpleDateFormat(pattern2);
-            String datestring = df.format(date);
+            date = new Date(cursor.getLong(3));
+            formattedDate = formatter.format(date);
             txtnombre.setText("Nombre: " + cursor.getString(1) + " " + cursor.getString(2));
-            txtfecha.setText("Fecha de nacimiento: " + datestring);
+            txtfecha.setText("Fecha de nacimiento: " + formattedDate);
             txtaltura.setText("Altura: " + cursor.getString(5));
             txtpeso.setText("Peso: " + cursor.getString(4));
             txttiposangre.setText("Tipo de Sangre: " + cursor.getString(6));
