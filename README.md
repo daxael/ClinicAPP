@@ -4,7 +4,7 @@
 
 
 
-Pequeña aplicación pensada para servir de apoyo a una clínica.
+Pequeña aplicación pensada para servir de apoyo a una clínica, a modo de simulacion con una base de datos local.
 En ella se crea una base de datos con la que se puede administrar datos de los usuarios que forman parte de la clínica, que principalmente
 son los pacientes y los médicos.
 Cada usuario tiene su propio nombre y contraseña, con la que se podrá acceder desde el login.
