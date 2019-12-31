@@ -4,17 +4,15 @@
 
 
 
-Pequeña aplicación pensada para servir de apoyo a una clínica, a modo de simulacion con una base de datos local.
-En ella se crea una base de datos con la que se puede administrar datos de los usuarios que forman parte de la clínica, que principalmente
+Pequeña aplicación pensada para servir de apoyo a una clínica; está hecha a modo de simulacion mediante una base de datos local.
+En ella se pueden administrar datos de los usuarios que forman parte de la clínica, que principalmente
 son los pacientes y los médicos.
 Cada usuario tiene su propio nombre y contraseña, con la que se podrá acceder desde el login.
 
-Desde esta perspectiva, he agregado funciones para que el usuario de la aplicación pueda contratar servicios, y pueda enviar mensajes
-a los distintos doctores (y éstos puedan recibirlos y responderlos).
-También se puede acceder a los datos generales de la clínica, incluyendo su posición en google maps. Y se pueden cargar los datos personales 
-del paciente (peso, altura, etc).
+He agregado funcionalidades como que el usuario de la aplicación pueda contratar servicios, pueda enviar mensajes
+a los distintos doctores (y éstos puedan recibirlos y responderlos), que pueda acceder a los datos generales de la clínica (incluyendo su posición en Google Maps) y que pueda acceder a sus datos personales registrados (peso, altura, foto...).
+También tiene la opción de entrar a configuración y cambiar su nombre de usuario y su contraseña.
 
-Por lo tanto, principalmente se verá a nivel de código como manejar datos desde una bbdd (insertar, modificar y borrar) y algunos sistemas
-como el de mensajería y servicio.
+Por lo tanto, principalmente se verá a nivel de código como manejar datos desde una bbdd SQL (insertar, modificar y borrar) y algunos sistemas como el de mensajería (dar de alta datos y relacionarlos dentro de la BBDD, para posteriormente cargarlos en una listview que contenga la información de dichos mensajes) y contratar servicios (revisar el estado de dichos servicios en la bbdd, y dar la opción de darlos de alta o cancelarlos).
 
-Las clases están comentadas.
+El proyecto está enteramente comentado en castellano.
