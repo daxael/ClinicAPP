@@ -118,7 +118,7 @@
         app:layout_constraintVertical_bias="0.937" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/img_fotousuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -127,9 +127,9 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.667"
+        app:layout_constraintVertical_bias="0.705"
         tools:srcCompat="@tools:sample/avatars[10]" />
 </android.support.constraint.ConstraintLayout>

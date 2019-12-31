@@ -5,7 +5,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -21,26 +25,31 @@ public class InformacionUsuario extends AppCompatActivity {
     TextView txtaltura;
     TextView txtpeso;
     TextView txttiposangre;
+    ImageView img_foto;
 
     VarGlobales global;
     BDClinica bdclinica;
     SQLiteDatabase db;
+    ImageLoader imageLoader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informacion_usuario);
+        ImageLoader.getInstance().init(ImageLoaderConfiguration.createDefault(getApplicationContext()));
 
         global = new VarGlobales();
 
         bdclinica = new BDClinica(this, "BDClinica", null, 1);
         db = bdclinica.getReadableDatabase();
+        imageLoader = ImageLoader.getInstance();
 
         txtnombre = findViewById(R.id.txt_nombre);
         txtfecha = findViewById(R.id.txt_fecha);
         txtaltura = findViewById(R.id.txt_altura);
         txtpeso = findViewById(R.id.txt_peso);
         txttiposangre = findViewById(R.id.txt_tiposangre);
+        img_foto = findViewById(R.id.img_fotousuario);
 
         try {
             rellenarInformacion();
@@ -55,6 +64,7 @@ public class InformacionUsuario extends AppCompatActivity {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         String formattedDate;
         Date date;
+        String url_imagen = "";
 
 
         while (cursor.moveToNext()) {
@@ -62,11 +72,13 @@ public class InformacionUsuario extends AppCompatActivity {
             formattedDate = formatter.format(date);
             txtnombre.setText("Nombre: " + cursor.getString(1) + " " + cursor.getString(2));
             txtfecha.setText("Fecha de nacimiento: " + formattedDate);
-            txtaltura.setText("Altura: " + cursor.getString(5));
-            txtpeso.setText("Peso: " + cursor.getString(4));
+            txtaltura.setText("Altura: " + cursor.getString(5) + " cm");
+            txtpeso.setText("Peso: " + cursor.getString(4) + " kg");
             txttiposangre.setText("Tipo de Sangre: " + cursor.getString(6));
+            url_imagen = cursor.getString(7);
         }
 
+        imageLoader.displayImage(url_imagen, img_foto);
         db.close();
         cursor.close();
     }
